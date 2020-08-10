@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+
+
+<body>
+  <!-- Retrieved data will be dumped here -->
+            
+  <div class="wrapper">
+    
+    <div class="sidebar">
+        <h2>Search</h2>
+          <div>
+            <input type="text" class="input" placeholder="Enter City">
+          </div>
+          <div>
+            <button class="btn search-btn fas fa-home">Search</button>
+            <button class="btn clear-btn">Clear</button>
+
+          </div>
+        <ul>
+            <li><button class="fas fa-home">New York</button></li>
+        </ul>
+    </div>
+  </div>
+
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Weather Dashboard</h1>
+      </div>
+    </div>
+    <div class="main_content">
+        <h2 class="header"></h2>  
+        <div class="info">
+          <div class="temp"></div>
+          <div class="humidity"></div>
+          <div class="windSpeed"></div>
+          <div class="uvIndex"></div>
+      </div>
+      <h2 class="header">5 Day Forecast:</h2>
+    </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src=javascript.js></script>
+</body>
+
+</html>
