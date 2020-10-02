@@ -14,7 +14,16 @@
             
   <div class="wrapper">
     
-    <div class="sidebar">
+    
+  </div>
+
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Weather Dashboard</h1>
+      </div>
+    </div>
+    <div class="main_content">
+      <div class="sidebar">
         <h2>Search</h2>
           <div>
             <input type="text" class="input" placeholder="Enter City">
@@ -27,14 +36,6 @@
         <ul class="allBtns">
         </ul>
     </div>
-  </div>
-
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <h1 class="display-4">Weather Dashboard</h1>
-      </div>
-    </div>
-    <div class="main_content">
       <h2 class="header"></h2>  
       <div class="info">
         <div class="day"></div>
@@ -44,47 +45,46 @@
         <div class="uvIndex"></div>
       </div>
       <h2 class="header1">5 Day Forecast:</h2>
-      <div class="container">
-        <div class="day1"></div>
-        <div class="weather-container">
-          <div class="weather-icon1"><img src="icons/unknown.png" alt=""></div>
-          <div class="tempFore1"></div>
-          <div class="humidity1"></div>
+      <div class="card">
+        <div class="card-body" id="day1">
+          <p class="weather-icon1"><img id="image" src="icons/unknown.png" alt=""></p>
+          <p class="tempFore1"></p>
+          <p class="humidity1"></p>
+          <p class="speed1"></p>
         </div>
       </div>
-      <div class="container">
-        <div class="day2"></div>
-        <div class="weather-container">
-          <div class="weather-icon2"><img src="icons/unknown.png" alt=""></div>
-          <div class="tempFore2"></div>
-          <div class="humidity2"></div>
+      <div class="card">
+        <div class="card-body" id="day2">
+          <p class="weather-icon2"><img id="image" src="icons/unknown.png" alt=""></p>
+          <p class="tempFore2"></p>
+          <p class="humidity2"></p>
+          <p class="speed2"></p>
         </div>
       </div>
-      <div class="container">
-        <div class="day3"></div>
-        <div class="weather-container">
-          <div class="weather-icon3"><img src="icons/unknown.png" alt=""></div>
-          <div class="tempFore3"></div>
-          <div class="humidity3"></div>
+      <div class="card">
+        <div class="card-body" id="day3">
+          <p class="weather-icon3"><img id="image" src="icons/unknown.png" alt=""></p>
+          <p class="tempFore3"></p>
+          <p class="humidity3"></p>
+          <p class="speed3"></p>
         </div>
       </div>
-      <div class="container">
-        <div class="day4"></div>
-        <div class="weather-container">
-          <div class="weather-icon4"><img src="icons/unknown.png" alt=""></div>
-          <div class="tempFore4"></div>
-          <div class="humidity4"></div>
+      <div class="card md-3">
+        <div class="card-body" id="day4">
+          <p class="weather-icon4"><img id="image" src="icons/unknown.png" alt=""></p>
+          <p class="tempFore4"></p>
+          <p class="humidity4"></p>
+          <p class="speed4"></p>
         </div>
       </div>
-      <div class="container">
-        <div class="day5"></div>
-        <div class="weather-container">
-          <div class="weather-icon5"><img src="icons/unknown.png" alt=""></div>
-          <div class="tempFore5"></div>
-          <div class="humidity5"></div>
+      <div class="card">
+        <div class="card-body" id="day5">
+          <p class="weather-icon5"><img id="image" src="icons/unknown.png" alt=""></p>
+          <p class="tempFore5"></p>
+          <p class="humidity5"></p>
+          <p class="speed5"></p>
         </div>
       </div>
-    </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>

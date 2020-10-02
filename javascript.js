@@ -33,6 +33,8 @@ $(document).on("click", ".fas", function(event){
     event.preventDefault();
     console.log("click works")
     console.log(this.getAttribute("class"));
+    console.log($(this).text());
+    $(".input").val($(this).text());
 })
 
 function addToHistory(){
@@ -88,6 +90,11 @@ function uvIndex(){
         method: "GET"
     }).then(function(response3){
         $(".uvIndex").text("UV: " + response3.value)
+        if(response3.value>4) {
+            $(".uvIndex").addClass("danger")
+        } else {
+            $(".uvIndex").addClass("safe")
+        }
     })
 }
 
@@ -103,10 +110,10 @@ function forecast(){
           var index = 0;
         for(var i = 1; i<6; i++){
             $(".day"+i).text(moment().add(i, 'days').format('dddd'));
-            $(".weather-icon"+i).empty();
-            $(".weather-icon"+i).html("<img src='icons/"+response2.list[3+index].weather[0].icon+".png>");
+            $(".weather-icon"+i).children("#image").attr("src", "https://api.openweathermap.org/img/w/" + response2.list[i-1].weather[0].icon + ".png");
             $(".tempFore"+i).text(response2.list[3+index].main.temp+" F");
             $(".humidity"+i).text(response2.list[3+index].main.humidity +" %");
+            $(".speed" +i).text("Wind Speed: " + response2.list[3+index].wind.speed + "mph")
             index = index + 8;
         }
       });
@@ -121,6 +128,7 @@ if(localStorage.getItem("latestSearch") != null){
 if(localStorage.getItem("history") != null){
     
 for(var i = 0; i< JSON.parse(localStorage.getItem("history")).length; i++){
-    $(".allBtns").append('<li class="history"><button class="fas '+JSON.parse(localStorage.getItem("history"))[i]+' fa-home">'+JSON.parse(localStorage.getItem("history")[i]+'</button></li>'));
+    var btnTemplate = `<div><button class="fas ${JSON.parse(localStorage.getItem("history"))[i]} fa-home btn"> ${JSON.parse(localStorage.getItem("history"))[i]}</button></div>`
+    $(".allBtns").append(btnTemplate);
     }
 }
